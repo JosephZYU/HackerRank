@@ -1,0 +1,90 @@
+🎬 Algorithms: Recursion
+
+Recursion is a concept, not a data structure nor an algorithm, but a way that we solve a problem.
+
+recursion is just a way of taking a problem and breaking it down into subproblems and then each of those subproblems is generally broken down into more and more and more sub problems.
+
+
+
+This implementation Fibonacci can get very inefficient. Now there's two things to know here. One is there is a way of optimizing this using a technique called memorization and we'll cover that in a different section.
+
+
+anything that is in implemented recursively can be implemented iteratively.
+
+The reason why we often use recursion is that for certain problems the recursive implementation is a lot easier to read and understand and write than interactive explanation. Doesn't mean that we always want to use recursion or we always want to use iteration, it really just depends on the problem. 
+
+
+So this means for you and your interview is it's very much a case-by-case decision. Sometimes you want to implement the iterative solution and other times you want to implement the recursive solution. But generally your interviewer will be in there in the room with you and so you don't have to decide by yourself, you can ask your interviewer. 
+
+
+Recursion is a super popular topic for interviews so I really encourage you to spend a lot of time really
+
+
+🎬 Recursion
+
+A recursive function is defined as a function that calls itself as part of its execution.
+
+
+
+
+
+
+This idea, this generalization of the problem, allows us to recursively define the factorial function.
+
+
+
+
+The second part is the recursive case. And this is where the recursion will actually take place. This is where the function will call itself.
+
+It won't call itself in exactly the same way it was called. It'll be a slight variation that makes the problem it's trying to solve a teeny bit smaller. But it generally passes the buck of solving the bulk of the solution to a different call down the line.
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    def fact(n):
+      # Define base case n is 1
+      if n == 1:
+        return 1
+      # Define recursive case n != 1
+      # Loop while N > 1, keep multiplying that product n and 
+      # decrementing (gradually decrease) that product
+      else:
+        return n*fact(n-1)
+    
+    
+    
+    
+
+It is possible to have more than one base case, or have more than one recursive case:
+
+    
+    
+    
+    
+    
+    
+    
+    # 🧐 the trick about recursion is to place your func inside your func!
+    # It may seem counter-intuition at first, try to get use to it
+    def cc(n):
+      # Define base case
+      if n == 1:
+        return 0
+      # If n is even number, repeat this process on n/2
+      elif n % 2 == 0:
+        return 1 + cc(n/2)
+      # 👀 The FINAL condition should be else to be comprehensive
+      # DO NOT Place elif in the end
+      else:
+        return 1 + cc(3*n + 1)
+      # If n is odd number, repeat this process on 3n + 1
+      # elif n % 2 == 0:
+      #   return 1 + cc(3*n + 1)
