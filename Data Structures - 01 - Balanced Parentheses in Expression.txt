@@ -1,0 +1,21 @@
+Notice that every open term is fine. An open term in any order we want, it doesn't matter. 
+
+It's the close terms that cause our string to potentially be invalid.
+
+🧐 Be Cautious with when to "CLOSE" the term
+
+    { } Curly Braces (Squiggles)
+    [ ] Square Bracket
+    ( ) Parenthesis
+
+
+
+🎯 Modularize your Code into Chucks 
+
+    it's certainly easier when we modularize our code, so keep that in mind in interview questions, that you want to:
+        ○ Key parts - really break up your code into its key parts
+        ○ Conceptual chunk - any time there's a little conceptual chunk of code that does a very specific concrete thing like check to make sure something is an open term, push that off into another function. 
+    
+    Maybe your interviewer will have you write the entire thing, maybe they won't actually, maybe they'll let you skip certain things that aren't that interesting but at any rate it'll be a lot easier if your code is broken up into major sections. 
+    
+So modularize your code and make sure to also keep, whenever you stack problems, to think about things like when the stack is empty and things like that. So keep those in mind and good luck as you continue to practice.
