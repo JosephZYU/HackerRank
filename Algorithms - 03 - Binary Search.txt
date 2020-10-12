@@ -1,0 +1,36 @@
+So binary search is a very intuitive algorithm, and I'm going to show how intuitive it is by giving an example. 
+
+So in an integer array that looks like this, you take some element that you're looking for, like 13, and you compare it to the midpoint, and 
+
+👀  it has to be a sorted array for this to work, it's very important!
+
+	
+
+and you compare it to the midpoint. 13 is less than this midpoint and so 13, if it's in the array at all, it has to be on the left side. And then you repeat this process on the left side and say let me look at the midpoint of the left side. Is 13 before and after that, before or after that, and you just repeat that process until you either find 13 or you know that 13 can't be in it.
+
+	
+
+So how fast is this is algorithm? Well let's imagine we start off with n elements so we have a search space of n elements. 
+
+	• In a single comparison, just one, we've cut our search space down to n over 2. 
+	• Then with one more comparison we cut it down to n over 4 
+	• and then in half again and half and half and half again. 
+
+So how many total operations in the very worst case will we have to run until we figure out if it contains an element or not?
+
+Well the total number of operations we'll have to do is determined by how many times can we divide n by 2 until we get down to just 1. 
+
+So this is what log of n expresses. A log base 2 of n expresses. 
+
+	
+
+So if you pause the video you can study that math for a second and see the relationship between those two things. 
+
+But this means that binary search is a log n problem. Let's look now at the implementation of binary search. 
+
+	
+
+
+To implement binary search we can either implement it recursively or iteratively. We'll do recursive implementation first.
+
+	🎬 Algorithms: Binary Search ⏰⏩ - After Java Course
